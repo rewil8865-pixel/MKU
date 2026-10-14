@@ -1,0 +1,71 @@
+
+/* MKU Student Market - additional styling */
+
+:root {
+  --green: #16734b;
+  --dark-green: #123c2c;
+  --light-green: #e1f3e8;
+  --background: #f5f7fb;
+  --text: #172033;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text);
+  background: var(--background);
+  line-height: 1.6;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+button {
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: var(--dark-green);
+  transform: translateY(-1px);
+}
+
+.category,
+.product {
+  box-shadow: 0 3px 12px rgba(20, 40, 30, 0.04);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.category:hover,
+.product:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(20, 40, 30, 0.09);
+}
+
+input:focus {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #f0bd4c;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
